@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient(360deg, rgba(201, 237, 255, 1) 21%, rgba(128, 211, 253, 1) 70%);
+}
+
+.block {
+    background-image: url("../assets/wood.jpg");
+}
+
+.left-branch:after,
+.right-branch:after {
+    background-image: url("../assets/leaves.png");
+}
+
+.timberman {
+    background-image: url("../assets/steve.png");
+}
+
+.grass {
+    background-image: url("../assets/grass.jpg");
+}
+
+.dirt {
+    background-image: url("../assets/dirt.jpg");
+}
+
+.grave {
+    background-image: url("../assets/grave.png");
+}

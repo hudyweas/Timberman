@@ -1,0 +1,22 @@
+.block {
+    z-index: 2;
+}
+.middle-timberman {
+    z-index: -1;
+}
+
+.timberman {
+    z-index: 3;
+}
+
+.gameOverMenu {
+    z-index: 9999;
+}
+
+.level-info {
+    z-index: 99;
+}
+
+.top-bar {
+    z-index: 999;
+}
