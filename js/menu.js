@@ -56,7 +56,7 @@ function changeSkin(skinType) {
             break;
     }
 
-    document.querySelector(".skin").setAttribute("href", `../css/${fileName}`);
+    document.querySelector(".skin").setAttribute("href", `css/${fileName}`);
 }
 
 function createChangeSkinsMenu(ulElements) {
