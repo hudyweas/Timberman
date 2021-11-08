@@ -1,0 +1,243 @@
+@import url(reset.css);
+@import url(z-index.css);
+
+body {
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.board {
+    display: flex;
+    padding-left: calc((100vw - 18rem) / 2);
+}
+
+.top-bar {
+    display: flex;
+    position: absolute;
+    align-items: baseline;
+    min-width: 30vh;
+}
+
+.time-bar,
+.time-bar-progress {
+    border-radius: 25px;
+}
+
+.time-bar {
+    width: 22vh;
+    margin: 0 4vh;
+    background: linear-gradient(
+        90deg,
+        rgba(180, 58, 58, 1) 0%,
+        rgba(253, 121, 29, 1) 25%,
+        rgba(240, 252, 69, 1) 50%,
+        rgba(133, 252, 69, 1) 75%,
+        rgba(69, 252, 82, 1) 100%
+    );
+    border: 2px solid black;
+}
+
+.time-bar-progress {
+    width: 0%;
+    background: black;
+    height: 20px;
+    float: right;
+    transition: 0.05s;
+}
+
+.pointsContainer {
+    padding: 5px;
+    min-width: 80px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: right;
+    margin-left: 5vw;
+}
+
+.points {
+    font-size: 2rem;
+    color: white;
+}
+
+.mainGameSection {
+    height: 80vh;
+}
+
+.game-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block {
+    height: 10vh;
+    width: 10vh;
+    background-size: cover;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.left-branch:after,
+.right-branch:after {
+    width: 10vh;
+    height: 10vh;
+    background-size: cover;
+    display: inline-block;
+    content: "";
+}
+
+.left-branch:after {
+    margin-left: -20vh;
+}
+
+.right-branch:after {
+    margin-right: -20vh;
+}
+
+.timbermans {
+    display: flex;
+    margin-top: -10vh;
+    z-index: 1;
+}
+
+.timberman {
+    width: 10vh;
+    height: 10vh;
+    background-size: cover;
+}
+
+.right-timberman {
+    transform: rotatey(180deg);
+}
+
+.gameOverMenu {
+    padding: 2rem;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: calc(50vh - 100px);
+    left: calc(50vw - 88px);
+}
+
+.gameOverMenu span {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.gameOverMenu .gameover-menu-button {
+    background-color: yellow;
+    font-size: 1rem;
+    padding: 0.5rem; /* W przypadkach 0.2rem 0.3 nie uzywac. najlepiej 0 0.5 1 1.5 itd. Wartosci px w takich dziwnych i tez najlepiej mnozniki 4 czy 0 px 4px 8px 12 px etc */
+
+    color: black;
+}
+
+.gameover-menu-button {
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color: #ffec64;
+    border-radius: 6px;
+    border: 1px solid #ffaa22;
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffee66;
+}
+.gameover-menu-button:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.grass {
+    background-size: 10vh;
+    margin-top: -20vh;
+    height: 10vh;
+}
+
+.dirt {
+    background-size: 10vh;
+    height: 10vh;
+}
+
+.level-info {
+    position: absolute;
+    top: 15vh;
+    font-size: 5rem;
+    transition: all 0.5s;
+    color: gold;
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.7);
+}
+
+.main-menu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-menu-list {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    margin-top: -20vh;
+}
+
+.main-menu-list-element {
+    box-shadow: inset 0px 1px 0px 0px #fff6af;
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color: #ffec64;
+    border-radius: 6px;
+    border: 1px solid #ffaa22;
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffee66;
+    text-align: center;
+}
+.main-menu-list-element:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+}
+
+.skin-input-section {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -20vh;
+}
+
+.skin-input {
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color: #ffec64;
+}
